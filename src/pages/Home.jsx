@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Cloud, Building2, User, Users } from "lucide-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Person1 from "./person1.jpg";
@@ -20,6 +22,9 @@ import Cr2 from "./cr3.jpg";
 import Cr3 from "./cr2.jpg";
 import Hea from "./Hea.png";
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   const [acctiveTab, setAcctiveTab] = useState("customers");
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -122,9 +127,7 @@ const Home = () => {
         "Be part of India's largest bike taxi community with excellent support.",
     },
   ];
-  const stats = [
-    
-  ];
+  const stats = [];
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-white top-8">
       {/* Container for text and visual elements */}
@@ -162,7 +165,7 @@ const Home = () => {
           <img
             src={Hea}
             alt="Featured visual"
-            className="absolute right-10 top-1/2 -translate-y-1/2 
+            className="absolute right-10 -top-1/2 -translate-y-1/2 
               rounded-lg shadow-xl z-10 scale-125"
           />
         </div>
@@ -172,7 +175,7 @@ const Home = () => {
       <div className="container mx-auto px-6 py-16 my-20">
         <div className="flex items-center justify-between">
           {/* Left Content */}
-          <div className="w-1/2 pr-12">
+          <div className="w-1/2 pr-12" data-aos="fade-right">
             <h1 className="text-6xl font-bold mb-8">Safety for all.</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               At Town Ride, the well-being of our customers is above everything
@@ -182,53 +185,53 @@ const Home = () => {
             </p>
             <button
               className="bg-yellow-400 hover:bg-yellow-500 px-8 py-3 
-              rounded-full text-lg font-medium transition-colors"
+            rounded-full text-lg font-medium transition-colors"
             >
               Know More
             </button>
           </div>
 
           {/* Right Images Grid */}
-          <div className="w-1/2 relative">
+          <div className="w-1/2 relative" data-aos="fade-left">
             <div className="grid grid-cols-2 gap-6">
               {/* Left column image */}
-              <div className="relative">
+              <div className="relative" data-aos="zoom-in">
                 <div
                   className="absolute inset-0 bg-yellow-400 rounded-3xl 
-                  transform rotate-6"
+                transform rotate-6"
                 ></div>
                 <img
                   src={Person3}
                   alt="Bike rider"
                   className="relative rounded-2xl shadow-lg w-full h-64 
-                    object-cover"
+                  object-cover"
                 />
               </div>
 
               {/* Right column images */}
               <div className="space-y-6">
-                <div className="relative">
+                <div className="relative" data-aos="fade-up">
                   <div
                     className="absolute inset-0 bg-yellow-400 rounded-3xl 
-                    transform rotate-6"
+                  transform rotate-6"
                   ></div>
                   <img
                     src={Person1}
                     alt="Customer"
                     className="relative rounded-2xl shadow-lg w-full h-40 
-                      object-cover"
+                    object-cover"
                   />
                 </div>
-                <div className="relative">
+                <div className="relative" data-aos="fade-up">
                   <div
                     className="absolute inset-0 bg-yellow-400 rounded-3xl 
-                    transform rotate-6"
+                  transform rotate-6"
                   ></div>
                   <img
                     src={Person2}
                     alt="Riders"
                     className="relative rounded-2xl shadow-lg w-full h-40 
-                      object-cover"
+                    object-cover"
                   />
                 </div>
               </div>
@@ -240,11 +243,11 @@ const Home = () => {
         <div className="container mx-auto px-6 py-16">
           <div className="flex flex-col md:flex-row items-center gap-16">
             {/* Left side images with yellow background */}
-            <div className="w-full md:w-1/2 relative">
+            <div className="w-full md:w-1/2 relative" data-aos="fade-right">
               {/* Yellow background shape */}
               <div
                 className="absolute -left-8 -top-8 w-[120%] h-[120%] 
-          bg-yellow-50/80 rounded-[100px] transform -rotate-6 md:block hidden"
+              bg-yellow-50/80 rounded-[100px] transform -rotate-6 md:block hidden"
               ></div>
 
               {/* Dotted pattern */}
@@ -264,7 +267,10 @@ const Home = () => {
               {/* Images */}
               <div className="relative flex flex-col items-center md:items-start">
                 {/* First image */}
-                <div className="relative mb-8 md:mb-0 md:-left-4 md:top-0 w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white shadow-lg">
+                <div
+                  className="relative mb-8 md:mb-0 md:-left-4 md:top-0 w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white shadow-lg"
+                  data-aos="zoom-in"
+                >
                   <img
                     src={Team1}
                     alt="Town Ride team members"
@@ -273,10 +279,14 @@ const Home = () => {
                 </div>
 
                 {/* Second image with yellow accent */}
-                <div className="relative w-full md:w-auto">
+                <div
+                  className="relative w-full md:w-auto"
+                  data-aos="zoom-in-up"
+                  data-aos-delay="200"
+                >
                   <div
                     className="absolute -left-4 -top-4 w-full md:w-[110%] h-full md:h-[110%] 
-              bg-yellow-400 rounded-3xl transform rotate-6"
+                  bg-yellow-400 rounded-3xl transform rotate-6"
                   ></div>
                   <img
                     src={Team2}
@@ -288,7 +298,7 @@ const Home = () => {
             </div>
 
             {/* Right side content */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2" data-aos="fade-left">
               <h2 className="text-4xl font-bold mb-8">
                 Know Us Better
                 <div className="w-16 h-1 bg-yellow-400 mt-2"></div>
@@ -306,7 +316,7 @@ const Home = () => {
 
               <button
                 className="bg-yellow-400 hover:bg-yellow-500 px-8 py-3 
-          rounded-full text-lg font-medium transition-colors"
+              rounded-full text-lg font-medium transition-colors"
               >
                 Read more here
               </button>
@@ -351,10 +361,17 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Centered heading with underline */}
           <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 animate-fade-in-down">
+            <h2
+              className="text-3xl sm:text-4xl font-bold mb-4"
+              data-aos="fade-up"
+            >
               What's in it for you
             </h2>
-            <div className="w-16 h-1 bg-yellow-400 mx-auto animate-scale-in"></div>
+            <div
+              className="w-16 h-1 bg-yellow-400 mx-auto"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            ></div>
           </div>
 
           {/* Toggle buttons */}
@@ -363,22 +380,24 @@ const Home = () => {
               <button
                 onClick={() => setActiveTab("customers")}
                 className={`px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition-colors
-                ${
-                  activeTab === "customers"
-                    ? "bg-yellow-400 text-black animate-pulse"
-                    : "text-gray-600 hover:text-gray-800"
-                }`}
+              ${
+                activeTab === "customers"
+                  ? "bg-yellow-400 text-black"
+                  : "text-gray-600 hover:text-gray-800"
+              }`}
+                data-aos="fade-right"
               >
                 Customers
               </button>
               <button
                 onClick={() => setActiveTab("captains")}
                 className={`px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition-colors
-                ${
-                  activeTab === "captains"
-                    ? "bg-yellow-400 text-black animate-pulse"
-                    : "text-gray-600 hover:text-gray-800"
-                }`}
+              ${
+                activeTab === "captains"
+                  ? "bg-yellow-400 text-black"
+                  : "text-gray-600 hover:text-gray-800"
+              }`}
+                data-aos="fade-left"
               >
                 Captains
               </button>
@@ -386,13 +405,18 @@ const Home = () => {
           </div>
 
           {/* Options grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto"
+            data-aos="fade-up"
+          >
             {(activeTab === "customers" ? customerOptions : captainOptions).map(
               (option, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-center text-center bg-white rounded-lg p-6 shadow-md 
-                  hover:shadow-lg transition-shadow animate-fade-in-up"
+                hover:shadow-lg transition-shadow"
+                  data-aos="zoom-in"
+                  data-aos-delay={`${index * 100}`}
                 >
                   <div className="mb-4 w-48 h-48 sm:w-56 sm:h-56">
                     <img
@@ -417,11 +441,19 @@ const Home = () => {
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Centered heading */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 animate-fade-in-down">
+          <div
+            className="text-center mb-12"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Straight from the Customer's Heart
             </h2>
-            <div className="w-16 h-1 bg-yellow-400 mx-auto animate-scale-in"></div>
+            <div
+              className="w-16 h-1 bg-yellow-400 mx-auto"
+              data-aos="scale-in"
+              data-aos-duration="1000"
+            ></div>
           </div>
 
           {/* Toggle buttons */}
@@ -433,11 +465,11 @@ const Home = () => {
                   setCurrentSlide(0);
                 }}
                 className={`px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition-colors
-                ${
-                  acctiveTab === "customers"
-                    ? "bg-yellow-400 text-black animate-pulse"
-                    : "text-gray-600 hover:text-gray-800"
-                }`}
+          ${
+            acctiveTab === "customers"
+              ? "bg-yellow-400 text-black"
+              : "text-gray-600 hover:text-gray-800"
+          }`}
               >
                 Customers
               </button>
@@ -447,11 +479,11 @@ const Home = () => {
                   setCurrentSlide(0);
                 }}
                 className={`px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg font-medium transition-colors
-                ${
-                  acctiveTab === "captains"
-                    ? "bg-yellow-400 text-black animate-pulse"
-                    : "text-gray-600 hover:text-gray-800"
-                }`}
+          ${
+            acctiveTab === "captains"
+              ? "bg-yellow-400 text-black"
+              : "text-gray-600 hover:text-gray-800"
+          }`}
               >
                 Captains
               </button>
@@ -464,7 +496,9 @@ const Home = () => {
             <button
               onClick={prevSlide}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 
-              bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
+        bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
+              data-aos="fade-right"
+              data-aos-duration="1000"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -472,13 +506,19 @@ const Home = () => {
             <button
               onClick={nextSlide}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 
-              bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
+        bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors"
+              data-aos="fade-left"
+              data-aos-duration="1000"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
             {/* Testimonial card */}
-            <div className="bg-white rounded-3xl shadow-lg p-8 relative animate-fade-in-up">
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 relative"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 <img
                   src={reviews[currentSlide].image}
@@ -504,11 +544,11 @@ const Home = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors 
-                  ${
-                    currentSlide === index
-                      ? "bg-yellow-400"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
+            ${
+              currentSlide === index
+                ? "bg-yellow-400"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
                 />
               ))}
             </div>
