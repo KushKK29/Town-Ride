@@ -123,26 +123,7 @@ const Home = () => {
     },
   ];
   const stats = [
-    {
-      icon: <Cloud className="w-12 h-12 text-yellow-400" />,
-      number: "25 M",
-      label: "Downloads",
-    },
-    {
-      icon: <Building2 className="w-12 h-12 text-yellow-400" />,
-      number: "100+",
-      label: "Cities",
-    },
-    {
-      icon: <User className="w-12 h-12 text-yellow-400" />,
-      number: "1M+",
-      label: "Captains",
-    },
-    {
-      icon: <Users className="w-12 h-12 text-yellow-400" />,
-      number: "10M+",
-      label: "Customers",
-    },
+    
   ];
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-white top-8">
@@ -156,9 +137,9 @@ const Home = () => {
             on <span className="text-red-500">Town Ride!</span>
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-lg">
-            Rapido, with Bike-Taxis, Autos & Cabs is revolutionising the way
+            Town Ride, with Bike-Taxis, Autos & Cabs is revolutionising the way
             India travels. With a presence in 150+ cities and over 100 million
-            safe rides completed, Rapido is becoming India’s go-to app for
+            safe rides completed, Town Ride is becoming India’s go-to app for
             comfortable and affordable rides.
           </p>
           <button

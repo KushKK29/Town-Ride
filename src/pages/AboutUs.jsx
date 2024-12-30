@@ -1,19 +1,20 @@
 import React from "react";
-
+import a1 from "./aboutUs1.jpg";
+import a2 from "./aboutus2.jpg";
 const AboutUsPage = () => {
   const founders = [
     {
-      name: "Rishikesh S R",
+      name: "Name",
       role: "Founder",
       image: "/api/placeholder/200/200",
     },
     {
-      name: "Pavan Guntupalli",
+      name: "Name",
       role: "Founder",
       image: "/api/placeholder/200/200",
     },
     {
-      name: "Aravind Sanka",
+      name: "Name",
       role: "Founder",
       image: "/api/placeholder/200/200",
     },
@@ -64,7 +65,7 @@ const AboutUsPage = () => {
                 <div className="relative mb-4 ml-12">
                   <div className="w-64 h-72 overflow-hidden rounded-tl-[80px] rounded-br-[80px]">
                     <img
-                      src="/api/placeholder/400/400"
+                      src={a1}
                       alt="Bike Rider"
                       className="w-full h-full object-cover"
                     />
@@ -74,7 +75,7 @@ const AboutUsPage = () => {
                   <div className="absolute -right-6 -bottom-6 w-40 h-40 bg-yellow-400 rounded-tr-[40px] -z-10"></div>
                   <div className="w-72 h-80 overflow-hidden rounded-tr-[80px] rounded-bl-[80px]">
                     <img
-                      src="/api/placeholder/400/400"
+                      src={a2}
                       alt="App User"
                       className="w-full h-full object-cover"
                     />
