@@ -145,11 +145,11 @@ const Home = () => {
     },
   ];
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-white">
+    <div className="relative min-h-screen w-full overflow-hidden bg-white top-8">
       {/* Container for text and visual elements */}
       <div className="container px-1 py-16 flex items-center">
         {/* Left text content */}
-        <div className="w-full md:w-1/2 z-10">
+        <div className="w-full md:w-1/2">
           <h1 className="text-5xl font-bold mb-6">
             Bharat moves
             <br />
