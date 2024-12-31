@@ -141,8 +141,7 @@ const Home = () => {
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-lg">
             Town Ride, with Bike-Taxis, Autos & Cabs is revolutionising the way
-            India travels. With a presence in 150+ cities and over 100 million
-            safe rides completed, Town Ride is becoming India’s go-to app for
+            India travels. Town Ride is becoming India’s go-to app for
             comfortable and affordable rides.
           </p>
           <button
@@ -305,7 +304,7 @@ const Home = () => {
               </h2>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                In 2017, Town Ride started out by pioneering the concept of
+                In 2024, Town Ride started out by pioneering the concept of
                 Bike-Taxi for India and today dominates the market with a
                 staggering 70% market share. With a vision to empower India to
                 move, we have been taking significant strides. Today we are a
