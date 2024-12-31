@@ -1,13 +1,13 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const customerLinks = [
-    { text: "Home", href: "#" },
-    { text: "About Us", href: "#" },
-    { text: "Safety", href: "#" },
-    { text: "Careers", href: "#" },
-    { text: "Privacy Policy", href: "#" },
+    { text: "Home", href: "/" },
+    { text: "About Us", href: "/about" },
+    { text: "Contact Us", href: "/contact" },
+    { text: "Terms", href: "/terms" },
   ];
 
   const customerTermsLinks = [
@@ -45,15 +45,27 @@ const Footer = () => {
   const FooterColumn = ({ title, links }) => (
     <div className="flex flex-col space-y-3">
       <h3 className="text-white font-semibold mb-2">{title}</h3>
-      {links.map((link, index) => (
-        <a
-          key={index}
-          href={link.href}
-          className="text-gray-300 hover:text-white transition-colors duration-200"
-        >
-          {link.text}
-        </a>
-      ))}
+      {links.map((link, index) =>
+        link.href.startsWith("/") ? (
+          <Link
+            key={index}
+            to={link.href}
+            className="text-gray-300 hover:text-white transition-colors duration-200"
+          >
+            {link.text}
+          </Link>
+        ) : (
+          <a
+            key={index}
+            href={link.href}
+            className="text-gray-300 hover:text-white transition-colors duration-200"
+            target={link.href === "#" ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+          >
+            {link.text}
+          </a>
+        )
+      )}
     </div>
   );
 

@@ -150,32 +150,22 @@ const ContactUs = () => {
             </p>
             <ul className="mt-4 space-y-4">
               <li>
-                <strong className="text-gray-800">
-                  Registered Office Address:
-                </strong>
+                <strong className="text-gray-800">Contact Number:</strong>
                 <br />
-                Roppen Transportation Services Pvt Ltd, 3rd Floor, Sai Prithvi
-                Arcade, Megha Hills, Sri Rama Colony, Madhapur, Hyderabad -
-                500081.
+                81253 58673
               </li>
               <li>
-                <strong className="text-gray-800">CIN:</strong>
+                <strong className="text-gray-800">Address:</strong>
                 <br />
-                U52210TG2015PTC097115
+                Dhanyasree Residency,201,Eswar villas road, Nizampet, 500090
               </li>
               <li>
-                <strong className="text-gray-800">City Office:</strong>
+                <strong className="text-gray-800"></strong>
                 <br />
-                Roppen Transportation Services Pvt Ltd, #148, 1st Floor, SLV
-                Nilaya, 5th Main 80ft road, HSR Layout 7th Sector, Bangalore
-                560102.
               </li>
               <li>
-                <strong className="text-gray-800">Corporate Office:</strong>
+                <strong className="text-gray-800"></strong>
                 <br />
-                Mantri Commercio - Spatium Tower A, Sy No 51/2, 51/3, 51/4, Of
-                Devarabeesanahalli Village And Hjem 39/5 Of Kariyammana Agrahara
-                Village Varthur Hobli, Bangalore East Taluk, Bangalore.
               </li>
             </ul>
           </div>
