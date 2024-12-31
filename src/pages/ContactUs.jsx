@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { Field, Label, Switch } from "@headlessui/react";
+import { Link } from "react-router-dom"; // Import Link for SPA navigation
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
 const ContactUs = () => {
-  const [agreed, setAgreed] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+    agreed: false,
+  });
 
   useEffect(() => {
     // Initialize AOS after the component mounts
@@ -14,6 +20,26 @@ const ContactUs = () => {
       once: true, // Only trigger the animation once
     });
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page reload
+    alert("Form submitted!"); // Optional alert for feedback
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
+      agreed: false,
+    });
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -45,7 +71,7 @@ const ContactUs = () => {
             <p className="mt-2 text-gray-600">
               Aute magna irure deserunt veniam aliqua magna enim voluptate.
             </p>
-            <form action="#" method="POST" className="mt-6">
+            <form onSubmit={handleSubmit} className="mt-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                   <label
@@ -56,8 +82,10 @@ const ContactUs = () => {
                   </label>
                   <input
                     id="first-name"
-                    name="first-name"
+                    name="firstName"
                     type="text"
+                    value={formData.firstName}
+                    onChange={handleChange}
                     className="block w-full rounded-md border-gray-300 p-2 mt-2"
                   />
                 </div>
@@ -70,8 +98,10 @@ const ContactUs = () => {
                   </label>
                   <input
                     id="last-name"
-                    name="last-name"
+                    name="lastName"
                     type="text"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     className="block w-full rounded-md border-gray-300 p-2 mt-2"
                   />
                 </div>
@@ -86,6 +116,8 @@ const ContactUs = () => {
                     id="email"
                     name="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="block w-full rounded-md border-gray-300 p-2 mt-2"
                   />
                 </div>
@@ -100,31 +132,31 @@ const ContactUs = () => {
                     id="message"
                     name="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="block w-full rounded-md border-gray-300 p-2 mt-2"
                   />
                 </div>
-                <Field className="flex gap-x-4 sm:col-span-2">
-                  <div className="flex h-6 items-center">
-                    <Switch
-                      checked={agreed}
-                      onChange={setAgreed}
-                      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out"
-                    >
-                      <span className="sr-only">Agree to policies</span>
-                      <span
-                        aria-hidden="true"
-                        className="transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
-                      />
-                    </Switch>
-                  </div>
-                  <Label className="text-sm text-gray-600">
+                <div className="flex gap-x-4 sm:col-span-2 items-center">
+                  <input
+                    id="agreed"
+                    name="agreed"
+                    type="checkbox"
+                    checked={formData.agreed}
+                    onChange={handleChange}
+                    className="h-4 w-4 rounded border-gray-300"
+                  />
+                  <label htmlFor="agreed" className="text-sm text-gray-600">
                     By selecting this, you agree to our{" "}
-                    <a href="#" className="font-semibold text-indigo-600">
+                    <Link
+                      to="/privacy-policy"
+                      className="font-semibold text-indigo-600"
+                    >
                       privacy&nbsp;policy
-                    </a>
+                    </Link>
                     .
-                  </Label>
-                </Field>
+                  </label>
+                </div>
               </div>
               <button
                 type="submit"
@@ -158,14 +190,6 @@ const ContactUs = () => {
                 <strong className="text-gray-800">Address:</strong>
                 <br />
                 Dhanyasree Residency,201,Eswar villas road, Nizampet, 500090
-              </li>
-              <li>
-                <strong className="text-gray-800"></strong>
-                <br />
-              </li>
-              <li>
-                <strong className="text-gray-800"></strong>
-                <br />
               </li>
             </ul>
           </div>
