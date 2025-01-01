@@ -36,13 +36,13 @@ const Refund = () => {
             applicable charges for rides booked through our platform, including
             cab, auto, and bike services (
             <span className="font-medium">"Services"</span>). This applies to
-            all interactions with Rapido through our mobile applications (
-            <span className="font-medium">"Rapido App"</span>), websites (
+            all interactions with Town Ridethrough our mobile applications (
+            <span className="font-medium">"Town RideApp"</span>), websites (
             <a
-              href="https://www.rapido.bike/"
+              href="https://www.Town Ride.bike/"
               className="text-blue-600 hover:underline"
             >
-              https://www.rapido.bike/
+              https://www.Town Ride.bike/
             </a>
             ), and offline communication.
           </p>
@@ -56,7 +56,7 @@ const Refund = () => {
 
           <p>
             Please ensure you review this Policy before booking any ride through
-            the Rapido Platform or using our Services. By proceeding with your
+            the Town RidePlatform or using our Services. By proceeding with your
             booking or using our Services, you consent to this Policy and any
             future amendments.
           </p>
@@ -75,10 +75,10 @@ const Refund = () => {
                 fare after that).
               </li>
               <li>
-                <span className="font-bold">Cancellation by Rapido: </span> In
-                case of unexpected circumstances (e.g., driver unavailability,
-                weather conditions), Rapido reserves the right to cancel the
-                booking and provide a full refund to the user.
+                <span className="font-bold">Cancellation by Town Ride: </span>{" "}
+                In case of unexpected circumstances (e.g., driver
+                unavailability, weather conditions), Town Ridereserves the right
+                to cancel the booking and provide a full refund to the user.
               </li>
               <li>
                 <span className="font-bold">No-Show Policy: </span> If the user
@@ -104,11 +104,11 @@ const Refund = () => {
               </li>
               <li>
                 <span className="font-bold">
-                  Refund for Cancellations by Rapido:{" "}
+                  Refund for Cancellations by Town Ride:{" "}
                 </span>{" "}
-                If the ride is canceled by Rapido for reasons beyond the user's
-                control (e.g., driver unavailability), the user will receive a
-                full refund.
+                If the ride is canceled by Town Ridefor reasons beyond the
+                user's control (e.g., driver unavailability), the user will
+                receive a full refund.
               </li>
               <li>
                 <span className="font-bold">Refund for Ride Issues: </span> If
