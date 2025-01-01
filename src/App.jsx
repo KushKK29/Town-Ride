@@ -6,14 +6,16 @@ import Terms from "./pages/Terms";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import Footer from "./components/Footer";
-
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Refund from "./pages/Refund";
 import Shipping from "./pages/Shipping";
+import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
+
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop /> {/* Use ScrollToTop here */}
       <div className="pt-16 container mx-auto p-4">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +27,7 @@ const App = () => {
           <Route path="/shipping" element={<Shipping />} />
         </Routes>
       </div>
-      <Footer></Footer>
+      <Footer />
     </Router>
   );
 };
