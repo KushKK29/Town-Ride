@@ -171,66 +171,68 @@ const Home = () => {
       </div>
 
       {/* Safety Section */}
-      <div className="container mx-auto px-6 py-16 my-20">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 my-8 sm:my-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left Content */}
-          <div className="w-1/2 pr-12" data-aos="fade-right">
-            <h1 className="text-6xl font-bold mb-8">Safety for all.</h1>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+          <div className="w-full lg:w-1/2" data-aos="fade-right">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-8">
+              Safety for all.
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed">
               At Town Ride, the well-being of our customers is above everything
               else. We are constantly in pursuit of enhancing our safety
               measures to ensure every Town Ride ride is a pleasant and
               comfortable experience.
             </p>
             <button
-              className="bg-yellow-400 hover:bg-yellow-500 px-8 py-3 
-            rounded-full text-lg font-medium transition-colors"
+              className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 px-6 sm:px-8 py-3 
+            rounded-full text-base sm:text-lg font-medium transition-colors duration-300"
             >
               Know More
             </button>
           </div>
 
           {/* Right Images Grid */}
-          <div className="w-1/2 relative" data-aos="fade-left">
-            <div className="grid grid-cols-2 gap-6">
+          <div className="w-[65%] lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-left">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
               {/* Left column image */}
               <div className="relative" data-aos="zoom-in">
                 <div
-                  className="absolute inset-0 bg-yellow-400 rounded-3xl 
-                transform rotate-6"
+                  className="absolute inset-0 bg-yellow-400 rounded-xl sm:rounded-3xl 
+                transform rotate-6 transition-transform duration-300 hover:rotate-4"
                 ></div>
                 <img
-                  src={Person3}
+                  src={Person1}
                   alt="Bike rider"
-                  className="relative rounded-2xl shadow-lg w-full h-64 
-                  object-cover"
+                  className="relative rounded-lg sm:rounded-2xl shadow-lg w-full
+                  h-40 sm:h-64 object-cover transition-transform duration-300 hover:scale-[1.02]"
                 />
               </div>
 
               {/* Right column images */}
-              <div className="space-y-6">
+              <div className="space-y-3 sm:space-y-6">
                 <div className="relative" data-aos="fade-up">
                   <div
-                    className="absolute inset-0 bg-yellow-400 rounded-3xl 
-                  transform rotate-6"
+                    className="absolute inset-0 bg-yellow-400 rounded-xl sm:rounded-3xl 
+                  transform rotate-6 transition-transform duration-300 hover:rotate-4"
                   ></div>
                   <img
-                    src={Person1}
+                    src={Person2}
                     alt="Customer"
-                    className="relative rounded-2xl shadow-lg w-full h-40 
-                    object-cover"
+                    className="relative rounded-lg sm:rounded-2xl shadow-lg w-full 
+                    h-[calc(20vh-1.5rem)] sm:h-40 object-cover transition-transform duration-300 hover:scale-[1.02]"
                   />
                 </div>
                 <div className="relative" data-aos="fade-up">
                   <div
-                    className="absolute inset-0 bg-yellow-400 rounded-3xl 
-                  transform rotate-6"
+                    className="absolute inset-0 bg-yellow-400 rounded-xl sm:rounded-3xl 
+                  transform rotate-6 transition-transform duration-300 hover:rotate-4"
                   ></div>
                   <img
-                    src={Person2}
+                    src={Person3}
                     alt="Riders"
-                    className="relative rounded-2xl shadow-lg w-full h-40 
-                    object-cover"
+                    className="relative rounded-lg sm:rounded-2xl shadow-lg w-full 
+                    h-[calc(20vh-1.5rem)] sm:h-40 object-cover transition-transform duration-300 hover:scale-[1.02]"
                   />
                 </div>
               </div>
@@ -242,7 +244,7 @@ const Home = () => {
         <div className="container mx-auto px-6 py-16">
           <div className="flex flex-col md:flex-row items-center gap-16">
             {/* Left side images with yellow background */}
-            <div className="w-full md:w-1/2 relative" data-aos="fade-right">
+            <div className="w-[65%] md:w-1/2 relative" data-aos="fade-right">
               {/* Yellow background shape */}
               <div
                 className="absolute -left-8 -top-8 w-[120%] h-[120%] 

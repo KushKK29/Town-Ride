@@ -24,6 +24,7 @@ const Navbar = () => {
           >
             Home
           </Link>
+          
           <Link
             to="/terms"
             className="text-gray-800 hover:text-yellow-600 font-medium"
@@ -41,6 +42,12 @@ const Navbar = () => {
             className="text-gray-800 hover:text-yellow-600 font-medium"
           >
             About Us
+          </Link>
+          <Link
+            to="/privacypolicy"
+            className="text-gray-800 hover:text-yellow-600 font-medium"
+          >
+            Privacy Policy
           </Link>
           {/* Download Button */}
           <a
@@ -92,6 +99,7 @@ const Navbar = () => {
           >
             Home
           </Link>
+          
           <Link
             to="/terms"
             className="block px-4 py-2 text-gray-800 hover:bg-yellow-100"
@@ -105,6 +113,13 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             Contact Us
+          </Link>
+          <Link
+            to="/privacypolicy"
+            className="block px-4 py-2 text-gray-800 hover:bg-yellow-100"
+            onClick={toggleMenu}
+          >
+            Privacy Policy
           </Link>
           <Link
             to="/about"

@@ -62,14 +62,14 @@ const ContactUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Section 1: Contact Form */}
           <div
-            className="bg-white p-4 sm:p-6 rounded-lg shadow-lg"
+            className="bg-white p-4 sm:p-6 rounded-lg shadow-xl border-gray-300 border-solid border-2"
             data-aos="fade-right"
           >
             <h2 className="text-xl font-semibold text-gray-900">
               Contact Sales
             </h2>
             <p className="mt-2 text-gray-600">
-              Aute magna irure deserunt veniam aliqua magna enim voluptate.
+              Find help for your queries here:
             </p>
             <form onSubmit={handleSubmit} className="mt-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -86,7 +86,7 @@ const ContactUs = () => {
                     type="text"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="block w-full rounded-md border-gray-300 p-2 mt-2"
+                    className="block w-full rounded-md border-2 border-gray-300 p-2 mt-2 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-white"
                   />
                 </div>
                 <div>
@@ -102,7 +102,7 @@ const ContactUs = () => {
                     type="text"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="block w-full rounded-md border-gray-300 p-2 mt-2"
+                    className="block w-full rounded-md border-2 border-gray-300 p-2 mt-2 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-white"
                   />
                 </div>
                 <div className="sm:col-span-2">
@@ -118,7 +118,7 @@ const ContactUs = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="block w-full rounded-md border-gray-300 p-2 mt-2"
+                    className="block w-full rounded-md border-2 border-gray-300 p-2 mt-2 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-white"
                   />
                 </div>
                 <div className="sm:col-span-2">
@@ -134,7 +134,7 @@ const ContactUs = () => {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="block w-full rounded-md border-gray-300 p-2 mt-2"
+                    className="block w-full rounded-md border-2 border-gray-300 p-2 mt-2 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-white"
                   />
                 </div>
                 <div className="flex gap-x-4 sm:col-span-2 items-center">
@@ -144,7 +144,7 @@ const ContactUs = () => {
                     type="checkbox"
                     checked={formData.agreed}
                     onChange={handleChange}
-                    className="h-4 w-4 rounded border-gray-300"
+                    className="h-4 w-4 rounded border-2 border-gray-300"
                   />
                   <label htmlFor="agreed" className="text-sm text-gray-600">
                     By selecting this, you agree to our{" "}
@@ -182,6 +182,11 @@ const ContactUs = () => {
             </p>
             <ul className="mt-4 space-y-4">
               <li>
+                <strong className="text-gray-800">E-mail:</strong>
+                <br />
+                townride38@gmail.com
+              </li>
+              <li>
                 <strong className="text-gray-800">Contact Number:</strong>
                 <br />
                 81253 58673
@@ -189,7 +194,8 @@ const ContactUs = () => {
               <li>
                 <strong className="text-gray-800">Address:</strong>
                 <br />
-                Dhanyasree Residency,201,Eswar villas road, Nizampet, 500090
+                Dhanyasree Residency,201,Eswar villas road, Nizampet, 500090,
+                India
               </li>
             </ul>
           </div>

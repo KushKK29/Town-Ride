@@ -8,19 +8,19 @@ const Footer = () => {
     { text: "About Us", href: "/about" },
     { text: "Contact Us", href: "/contact" },
     { text: "Terms", href: "/terms" },
+    { text: "Privacy Policy", href: "/privacypolicy" },
+    { text: "Refund & Cancellation", href: "/refundcancel" },
+    { text: "Shipping Policy", href: "/shipping" },
   ];
 
   const customerTermsLinks = [
-    { text: "Customer Terms - Bike Taxi", href: "#" },
-    { text: "Customer Terms - Cabs and Auto", href: "#" },
-    { text: "Corporate Affairs", href: "#" },
+    { text: "Customer Terms - Bike Taxi", href: "/terms" },
+    { text: "Customer Terms - Cabs and Auto", href: "/terms" },
   ];
 
   const captainTermsLinks = [
-    { text: "Captain Terms - Bike Taxi", href: "#" },
-    { text: "Captain Terms - Cabs and Auto", href: "#" },
-    { text: "Blog", href: "#" },
-    { text: "Press", href: "#" },
+    { text: "Captain Terms - Bike Taxi", href: "/terms" },
+    { text: "Captain Terms - Cabs and Auto", href: "/terms" },
   ];
 
   const AppStoreButton = ({ type, href }) => {
@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400">
-              © 2024 Roppen Transportation. All rights reserved.
+              © 2024 TR TOWN RIDE (OPC) PRIVATE LIMITED. All rights reserved.
             </div>
             <SocialLinks />
           </div>
