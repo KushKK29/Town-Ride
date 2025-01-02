@@ -23,25 +23,6 @@ const Footer = () => {
     { text: "Captain Terms - Cabs and Auto", href: "/terms" },
   ];
 
-  const AppStoreButton = ({ type, href }) => {
-    const imageSrc =
-      type === "google"
-        ? "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-        : "https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg";
-
-    const className = type === "google" ? "h-16" : "h-12";
-
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <img
-          src={imageSrc}
-          alt={`Get it on ${type === "google" ? "Google Play" : "App Store"}`}
-          className="hidden"
-        />
-      </a>
-    );
-  };
-
   const FooterColumn = ({ title, links }) => (
     <div className="flex flex-col space-y-3">
       <h3 className="text-white font-semibold mb-2">{title}</h3>
@@ -71,16 +52,28 @@ const Footer = () => {
 
   const SocialLinks = () => (
     <div className="flex space-x-6">
-      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
+      <a
+        href="#"
+        className="text-white hidden hover:text-gray-300 transition-colors"
+      >
         <Facebook className="h-6 w-6" />
       </a>
-      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
+      <a
+        href="#"
+        className="text-white hidden hover:text-gray-300 transition-colors"
+      >
         <Twitter className="h-6 w-6" />
       </a>
-      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
+      <a
+        href="#"
+        className="text-white hidden hover:text-gray-300 transition-colors"
+      >
         <Linkedin className="h-6 w-6" />
       </a>
-      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
+      <a
+        href="#"
+        className="text-white hidden hover:text-gray-300 transition-colors"
+      >
         <Instagram className="h-6 w-6" />
       </a>
     </div>
@@ -89,22 +82,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Customer App Section */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold mb-4">Customer app</h3>
-            <div className="space-y-4">
-              <AppStoreButton type="google" href="#" />
-              <AppStoreButton type="apple" href="#" />
-            </div>
-          </div>
-
-          {/* Captain App Section */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold mb-4">Captain app</h3>
-            <AppStoreButton type="google" href="#" />
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Navigation Links */}
           <FooterColumn title="Quick Links" links={customerLinks} />
           <FooterColumn title="Customer Terms" links={customerTermsLinks} />
