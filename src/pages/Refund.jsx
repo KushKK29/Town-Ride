@@ -117,15 +117,15 @@ const Returns = () => {
             <div className="space-y-3 text-base">
               <p>
                 We only replace items if they are defective or damaged. If you
-                need to exchange it for the same item, send us an email at
+                need to exchange it for the same item, send us an email at{" "}
                 <a
                   href="mailto:townride38@gmail.com"
                   class="text-blue-500 hover:underline"
                 >
                   townride38@gmail.com
                 </a>{" "}
-                and send your item to: 622 Manglam Electronic Market Jaipur
-                Rajasthan India 302001.
+                and send your item to: Dhanyasree Residency,201,Eswar villas
+                road, Nizampet 500090, India.
               </p>
             </div>
           </section>
@@ -157,11 +157,9 @@ const Returns = () => {
             <div className="space-y-3 text-base">
               <p>To return your product, mail it to:</p>
               <p className="font-medium">
-                622 Manglam Electronic Market
+                Dhanyasree Residency,201,Eswar villas road, Nizampet
                 <br />
-                Jaipur, Rajasthan
-                <br />
-                India 302001
+                500090, India.
               </p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>
