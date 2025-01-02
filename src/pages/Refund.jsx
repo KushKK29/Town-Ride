@@ -1,138 +1,192 @@
 import React from "react";
 
-const Refund = () => {
+const Returns = () => {
   return (
-    <div className="max-w-7xl py-8 relative">
-      {/* Background Pattern */}
+    <div className="max-w-7xl py-8 relative px-4">
       <div className="absolute top-0 right-0 w-64 h-64 grid grid-cols-8 gap-1 opacity-20">
         {[...Array(64)].map((_, i) => (
           <div key={i} className="w-2 h-2 bg-yellow-400 rounded-full" />
         ))}
       </div>
 
-      {/* Main Content */}
       <div className="relative">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4 mt-5">
-          REFUND AND CANCELLATION POLICY
+        <h1 className="text-3xl font-bold text-gray-800 mb-8 border-b pb-4">
+          Returns Policy
         </h1>
 
-        <div className="space-y-3 text-gray-700 text-sm font-medium">
-          <p>
-            Your convenience and satisfaction are our top priorities, and this
-            Refund and Cancellation Policy outlines the terms for cancellations
-            and refunds to ensure a seamless experience by TR TOWN RIDE (OPC)
-            PRIVATE LIMITED (referred to as the{" "}
-            <span className="font-medium">"Company"</span>,{" "}
-            <span className="font-medium">"we"</span>,{" "}
-            <span className="font-medium">"TR Town Ride"</span>,{" "}
-            <span className="font-medium">"us"</span>, or{" "}
-            <span className="font-medium">"our"</span>).
-          </p>
-
-          <p>
-            This Refund and Cancellation Policy (
-            <span className="font-medium">"Policy"</span>) outlines our policies
-            and procedures for the cancellation, refund processing, and
-            applicable charges for rides booked through our platform, including
-            cab, auto, and bike services (
-            <span className="font-medium">"Services"</span>). This applies to
-            all interactions with Town Ridethrough our mobile applications (
-            <span className="font-medium">"Town RideApp"</span>), websites (
-            <a
-              href="https://www.Town Ride.bike/"
-              className="text-blue-600 hover:underline"
-            >
-              https://www.Town Ride.bike/
-            </a>
-            ), and offline communication.
-          </p>
-
-          <p>
-            The terms <span className="font-medium">"you"</span> and{" "}
-            <span className="font-medium">"your"</span> refer to all users of
-            the TR Town Ride Platform, including Captains, Customers, Vendor
-            Partners, and others availing our services.
-          </p>
-
-          <p>
-            Please ensure you review this Policy before booking any ride through
-            the Town RidePlatform or using our Services. By proceeding with your
-            booking or using our Services, you consent to this Policy and any
-            future amendments.
-          </p>
-
-          <div className="mt-8">
-            {/* Cancellation Policy */}
-            <h2 className="font-bold text-lg sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-8 mb-4 -mx-10 text-center sm:text-left">
-              Cancellation Policy
+        <div className="space-y-6 text-gray-700">
+          <section>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Returns
             </h2>
-            <ul className="list-decimal pl-5 space-y-3">
-              <li>
-                <span className="font-bold">Cancellation by User: </span> Users
-                can cancel a booking anytime before the ride starts. A
-                cancellation fee may apply based on the time of cancellation
-                (e.g., free cancellation within 5 minutes, a percentage of the
-                fare after that).
-              </li>
-              <li>
-                <span className="font-bold">Cancellation by Town Ride: </span>{" "}
-                In case of unexpected circumstances (e.g., driver
-                unavailability, weather conditions), Town Ridereserves the right
-                to cancel the booking and provide a full refund to the user.
-              </li>
-              <li>
-                <span className="font-bold">No-Show Policy: </span> If the user
-                fails to board the vehicle within the allotted time (e.g., 10
-                minutes), the booking will be marked as "No-Show," and no refund
-                will be issued.
-              </li>
-            </ul>
+            <div className="space-y-3 text-base">
+              <p>
+                Our policy lasts 30 days. If 30 days have gone by since your
+                purchase, unfortunately we can't offer you a refund or exchange.
+              </p>
+              <p>
+                To be eligible for a return, your item must be unused and in the
+                same condition that you received it. It must also be in the
+                original packaging.
+              </p>
+              <p>
+                Several types of goods are exempt from being returned.
+                Perishable goods such as food, flowers, newspapers or magazines
+                cannot be returned. We also do not accept products that are
+                intimate or sanitary goods, hazardous materials, or flammable
+                liquids or gases.
+              </p>
+              <p>
+                Additional non-returnable items:
+                <ul className="list-disc ml-3 pl-5 space-y-2">
+                  <li>Gift cards</li>
+                  <li>Downloadable software products</li>
+                  <li>Some health and personal care items</li>
+                </ul>
+              </p>
+              <p>
+                To complete your return, we require a receipt or proof of
+                purchase. <br />
+                Please do not send your purchase back to the manufacturer.
+              </p>
+              <p>
+                There are certain situations where only partial refunds are
+                granted: (if applicable) Book with obvious signs of use CD, DVD,
+                VHS tape, software, video game, cassette tape, or vinyl record
+                that has been opened. Any item not in its original condition, is
+                damaged or missing parts for reasons not due to our error. Any
+                item that is returned more than 30 days after delivery
+              </p>
+            </div>
+          </section>
 
-            {/* Refund Policy */}
-            <h2 className="font-bold text-lg sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-8 mb-4 -mx-10 text-center sm:text-left">
-              Refund Policy
+          <section>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">
+              Refunds (if applicable)
             </h2>
-            <ul className="list-decimal pl-5 space-y-3">
-              <li>
-                <span className="font-bold">
-                  Refund for Cancellations by User:{" "}
-                </span>{" "}
-                Users will receive a full refund if the cancellation is made
-                within the allowed time frame. A partial refund may be provided
-                after deducting cancellation charges if the cancellation is made
-                after the allowed time.
-              </li>
-              <li>
-                <span className="font-bold">
-                  Refund for Cancellations by Town Ride:{" "}
-                </span>{" "}
-                If the ride is canceled by Town Ridefor reasons beyond the
-                user's control (e.g., driver unavailability), the user will
-                receive a full refund.
-              </li>
-              <li>
-                <span className="font-bold">Refund for Ride Issues: </span> If
-                users face issues during the ride (e.g., improper service,
-                overcharging), they can file a complaint. After investigation, a
-                refund or compensation will be provided if the issue is found to
-                be valid.
-              </li>
-              <li>
-                <span className="font-bold">Refund Timeline: </span> Refunds
-                will be processed within 7-10 business days after the
-                cancellation is confirmed.
-              </li>
-              <li>
-                <span className="font-bold">Exceptions: </span> No refunds will
-                be provided for changes to the booking after the ride has
-                started or for special promotional offers.
-              </li>
-            </ul>
-          </div>
+            <div className="space-y-3 text-base">
+              <p>
+                Once your return is received and inspected, we will send you an
+                email to notify you that we have received your returned item. We
+                will also notify you of the approval or rejection of your
+                refund. If you are approved, then your refund will be processed,
+                and a credit will automatically be applied to your credit card
+                or original method of payment, within a certain amount of days.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Late or missing refunds (if applicable)
+            </h2>
+            <div className="space-y-3 text-base">
+              <p>
+                If you haven’t received a refund yet, first check your bank
+                account again. Then contact your credit card company, it may
+                take some time before your refund is officially posted. Next
+                contact your bank. There is often some processing time before a
+                refund is posted. If you’ve done all of this and you still have
+                not received your refund yet, please contact us at{" "}
+                <a
+                  href="mailto:townride38@gmail.com"
+                  class="text-blue-500 hover:underline"
+                >
+                  townride38@gmail.com
+                </a>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Sale items (if applicable)
+            </h2>
+            <div className="space-y-3 text-base">
+              <p>
+                Only regular priced items may be refunded, unfortunately sale
+                items cannot be refunded.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Exchanges (if applicable)
+            </h2>
+            <div className="space-y-3 text-base">
+              <p>
+                We only replace items if they are defective or damaged. If you
+                need to exchange it for the same item, send us an email at
+                <a
+                  href="mailto:townride38@gmail.com"
+                  class="text-blue-500 hover:underline"
+                >
+                  townride38@gmail.com
+                </a>{" "}
+                and send your item to: 622 Manglam Electronic Market Jaipur
+                Rajasthan India 302001.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Gifts Return
+            </h2>
+            <div className="space-y-3 text-base">
+              <p>
+                If the item was marked as a gift when purchased and shipped
+                directly to you, you’ll receive a gift credit for the value of
+                your return. Once the returned item is received, a gift
+                certificate will be mailed to you.
+              </p>
+              <p>
+                If the item wasn’t marked as a gift when purchased, or the gift
+                giver had the order shipped to themselves to give to you later,
+                we will send a refund to the gift giver and he will find out
+                about your return.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              Shipping Returns
+            </h2>
+            <div className="space-y-3 text-base">
+              <p>To return your product, mail it to:</p>
+              <p className="font-medium">
+                622 Manglam Electronic Market
+                <br />
+                Jaipur, Rajasthan
+                <br />
+                India 302001
+              </p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>
+                  You will be responsible for paying for your own shipping costs
+                  for returning your item. Shipping costs are non-refundable. If
+                  you receive a refund, the cost of return shipping will be
+                  deducted from your refund.
+                </li>
+                <li>
+                  Depending on where you live, the time it may take for your
+                  exchanged product to reach you, may vary.
+                </li>
+                <li>
+                  If you are shipping an item over $75, you should consider
+                  using a trackable shipping service or purchasing shipping
+                  insurance.
+                </li>
+                <li>We don't guarantee receipt of returned items</li>
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
     </div>
   );
 };
 
-export default Refund;
+export default Returns;
