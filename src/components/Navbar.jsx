@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* Download Button */}
           <a
             href="#"
-            className="bg-yellow-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-yellow-700 transition"
+            className="bg-yellow-600 hidden text-white px-4 py-2 rounded-md shadow-md hover:bg-yellow-700 transition"
           >
             Download App
           </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* Download Button (Mobile View) */}
           <a
             href="#"
-            className="bg-yellow-600 text-white px-3 py-1 rounded-md mr-4 hover:bg-yellow-700 transition"
+            className="bg-yellow-600 hidden text-white px-3 py-1 rounded-md mr-4 hover:bg-yellow-700 transition"
           >
             Download App
           </a>

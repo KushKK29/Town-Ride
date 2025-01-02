@@ -3,6 +3,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom"; // Import Link for SPA navigation
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,45 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent page reload
-    alert("Form submitted!"); // Optional alert for feedback
+
+    // Validate if user agreed to the privacy policy
+    if (!formData.agreed) {
+      alert("Please agree to the privacy policy.");
+      return;
+    }
+
+    // Create template parameters to send via EmailJS
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    // Send email via EmailJS
+    emailjs
+      .send(
+        "service_x98onwn", // Replace with your EmailJS Service ID
+        "template_7wbz7zl", // Replace with your EmailJS Template ID
+        templateParams,
+        "rVCAY7OUljkJotEN1" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          alert("Thank you! Your message has been sent.");
+        },
+        (error) => {
+          console.error("Failed to send email.", error);
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      );
+
+    // Reset the form
     setFormData({
       firstName: "",
       lastName: "",
@@ -194,7 +233,7 @@ const ContactUs = () => {
               <li>
                 <strong className="text-gray-800">Address:</strong>
                 <br />
-                Dhanyasree Residency,201,Eswar villas road, Nizampet, 500090,
+                Dhanyasree Residency, 201, Eswar Villas Road, Nizampet, 500090,
                 India
               </li>
             </ul>

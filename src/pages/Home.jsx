@@ -145,7 +145,7 @@ const Home = () => {
             comfortable and affordable rides.
           </p>
           <button
-            className="bg-black text-white px-8 py-3 rounded-full 
+            className="bg-black hidden text-white px-8 py-3 rounded-full 
             hover:bg-gray-800 transition-colors"
           >
             Get Started
@@ -185,7 +185,7 @@ const Home = () => {
               comfortable experience.
             </p>
             <button
-              className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 px-6 sm:px-8 py-3 
+              className="w-full hidden sm:w-auto bg-yellow-400 hover:bg-yellow-500 px-6 sm:px-8 py-3 
             rounded-full text-base sm:text-lg font-medium transition-colors duration-300"
             >
               Know More
@@ -316,7 +316,7 @@ const Home = () => {
               </p>
 
               <button
-                className="bg-yellow-400 hover:bg-yellow-500 px-8 py-3 
+                className="bg-yellow-400 hidden hover:bg-yellow-500 px-8 py-3 
               rounded-full text-lg font-medium transition-colors"
               >
                 Read more here

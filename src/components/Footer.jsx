@@ -36,7 +36,7 @@ const Footer = () => {
         <img
           src={imageSrc}
           alt={`Get it on ${type === "google" ? "Google Play" : "App Store"}`}
-          className={className}
+          className="hidden"
         />
       </a>
     );
@@ -71,16 +71,16 @@ const Footer = () => {
 
   const SocialLinks = () => (
     <div className="flex space-x-6">
-      <a href="#" className="text-white hover:text-gray-300 transition-colors">
+      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
         <Facebook className="h-6 w-6" />
       </a>
-      <a href="#" className="text-white hover:text-gray-300 transition-colors">
+      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
         <Twitter className="h-6 w-6" />
       </a>
-      <a href="#" className="text-white hover:text-gray-300 transition-colors">
+      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
         <Linkedin className="h-6 w-6" />
       </a>
-      <a href="#" className="text-white hover:text-gray-300 transition-colors">
+      <a href="#" className="text-white hidden hover:text-gray-300 transition-colors">
         <Instagram className="h-6 w-6" />
       </a>
     </div>
